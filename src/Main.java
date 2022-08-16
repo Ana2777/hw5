@@ -6,20 +6,19 @@ public class Main {
         a[1] = 2;
         a[2] = 3;
         double[] b = {1.57, 7.654, 9.986};
-        {
-            int[] box = new int[5];
-            box[0] = 22;
-            box[1] = 1;
-            box[2] = 25;
-            box[3] = 11;
-            box[4] = 21;
-            char[] sammerDays = {12, 22, 31};
-        }
+
+        int[] box = new int[5];
+        box[0] = 22;
+        box[1] = 1;
+        box[2] = 25;
+        box[3] = 11;
+        box[4] = 21;
+        char[] sammerDays = {12, 22, 31};
 
 // Задача 2
-        for (int i = 0; i <= 2; i++) {
-            if (i == 2) {
-                System.out.print(a[2]);
+        for (int i = 0; i < a.length; i++) {
+            if (i == a.length - 1) {
+                System.out.print(a[i]);
             } else {
                 System.out.print(a[i] + ",");
             }
@@ -27,41 +26,63 @@ public class Main {
         System.out.println(" ");
 
         for (int c = 0; c < b.length; c++) {
-            if (c == 2) {
-                System.out.println(b[2]);
+            if (c == b.length - 1) {
+                System.out.println(b[c]);
             } else {
                 System.out.print(b[c] + ",");
             }
         }
         System.out.println(" ");
 
-//// Задача 3
-        for (int n = 2; n >= 0; n--) {
-            if (n == 0) {
-                System.out.print(a[0]);
+        for (int p = 0; p < box.length; p++) {
+            if (p == 0) {
+                System.out.print(box[p]);
             } else {
-                System.out.print(a[n] + ",");
+                ;
+                System.out.println(box[p] + ",");
             }
-        }
-        System.out.println(" ");
-        for (int k = 2; k >= 0; k--) {
-            if (k == 0) {
-                System.out.println(b[0]);
-            } else {
-                System.out.print(b[k] + ",");
+            System.out.println(" ");
+// Задача 3
+            for (int n = a.length - 1; n >= 0; n--) {
+                if (n == 0) {
+                    System.out.print(a[n]);
+                } else {
+                    System.out.print(a[n] + ",");
+                }
             }
-        }
+            System.out.println(" ");
 
-// Задание 4
-        for (int i = 0; i > a.length; i++) {
-            if (a[i] % 2 == 0) {
-                System.out.println(a[i]);
-            } else {
-                if (a[i] % 2 != 0) {
-                    System.out.println(a[i]++);
+            for (int k = b.length - 1; k >= 0; k--) {
+                if (k == 0) {
+                    System.out.println(b[k]);
+                } else {
+                    System.out.print(b[k] + ",");
+                }
+            }
+            System.out.println(" ");
+
+            for (int e = box.length - 1; e >= 0; e--) {
+                if (e == 0) {
+                    System.out.print(box[e]);
+                } else {
+                    System.out.print(box[e] + ",");
+                }
+            }
+
+            System.out.println(" ");
+/// Задание 4
+            for (int v = 0; v < a.length; v++) {
+                if (a[v] % 2 == 1) {
+                    a[v]++;
+                    System.out.println(a[v]);
+                } else if (v != a[v] - 1) {
+                    System.out.println(a[v] + ", ");
 
                 }
             }
 
+
         }
-    }}
+    }
+}
+
